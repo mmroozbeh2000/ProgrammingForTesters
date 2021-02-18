@@ -1,9 +1,9 @@
-package se.jocke.excersises.basic;
+package se.jocke.excercises.basic;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class testSubtract {
+public class TestSubtract {
     @Test
     public void testCalculate(){
         int res = Subtract.calculate(10, 2);

@@ -1,9 +1,9 @@
-package se.jocke.excersises.basic;
+package se.jocke.excercises.basic;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class testDivide {
+public class TestDivide {
     @Test
     public void testDivision () {
         double res = Divide.calculate(10,2);

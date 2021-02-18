@@ -1,9 +1,9 @@
-package se.jocke.excersises.basic;
+package se.jocke.excercises.basic;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class testMultiply {
+public class TestMultiply {
     @Test
     public void testMultiply() {
         int res = Multiply.multiply(10,2);
