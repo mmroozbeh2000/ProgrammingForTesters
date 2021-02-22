@@ -18,7 +18,7 @@ public class TestModelMapperEmployee {
     public void testEmployeeToEmployeeModelMapper() {
         EmployeeModel model = EmployeeModelMapper.map(EMPLOYEE);
         Assertions.assertAll(
-                //() -> assertEquals(EMPLOYEE.getEmployeeId(), model.getEmployeeId()),   // expected: <EntityID(id=100)> but was: <100>
+                () -> assertEquals(EMPLOYEE.getEmployeeId().getId(), model.getEmployeeId()),   // expected: <EntityID(id=100)> but was: <100>
                 () -> assertEquals(EMPLOYEE.getFirstName(), model.getFirstName()),
                 () -> assertEquals(EMPLOYEE.getLastName(), model.getLastName()),
                 () -> assertEquals(EMPLOYEE.getSalary(), model.getSalary()),
@@ -32,7 +32,7 @@ public class TestModelMapperEmployee {
     public void testEmployeeModelToEmployee() {
         Employee employee = EmployeeModelMapper.map(EMPLOYEE_MODEL);
         Assertions.assertAll(
-                //() -> assertEquals(EMPLOYEE_MODEL.getEmployeeId(), employee.getEmployeeId()),   // expected: <200> but was: <EntityID(id=200)>
+                () -> assertEquals(EMPLOYEE_MODEL.getEmployeeId(), employee.getEmployeeId().getId()),   // expected: <200> but was: <EntityID(id=200)>
                 () -> assertEquals(EMPLOYEE_MODEL.getFirstName(), employee.getFirstName()),
                 () -> assertEquals(EMPLOYEE_MODEL.getLastName(), employee.getLastName()),
                 () -> assertEquals(EMPLOYEE_MODEL.getSalary(), employee.getSalary()),
