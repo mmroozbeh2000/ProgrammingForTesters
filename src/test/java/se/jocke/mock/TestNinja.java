@@ -12,7 +12,7 @@ import se.jocke.dependencyInjection.Ninja;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.when;
 
-@ExtendWith(MockitoExtention.class)
+@ExtendWith(MockitoExtension.class)
 public class TestNinja {
     @Mock
     Fu fu;
@@ -21,8 +21,8 @@ public class TestNinja {
     Ninja ninja = new Ninja();
 
     @Test
-    public void testNInja() {
+    public void testNinja() {
         when(fu.bar()).thenReturn("fu-bar");
-        Assertions.assertEquals(fu)
+        Assertions.assertEquals(fu.bar(), "fu-bar");
     }
 }
