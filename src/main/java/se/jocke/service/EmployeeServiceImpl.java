@@ -38,7 +38,8 @@ public class EmployeeServiceImpl implements EmployeeService {
         return EmployeePojoMapper.map(employeeDao.save(EmployeePojoMapper.map(employee)));
     }
     @TimeAndLogg
-    public List<Employee> getAllEmployees() {
+    public List<Employee>
+    getAllEmployees() {
         return EmployeePojoMapper.map(employeeDao.findAll());
     }
 }
