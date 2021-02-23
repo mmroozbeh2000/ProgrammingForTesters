@@ -1,23 +1,24 @@
-package se.jocke.basic;
+package se.calculator;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import se.jocke.basic.Calculator;
 
-public class TestCalculator {
+public class TestCalculatorMultiplications {
     private Calculator calculator = new Calculator();
 
     @Test
-    public void testMultiplycation() {
+    public void testMultiplication() {
         int product = calculator.multiply(4,2);
         Assertions.assertEquals(8,product);
     }
     @Test
-    public void testNegativeMultiplycation() {
+    public void testNegativeMultiplication() {
         int product = calculator.multiply(4,-2);
         Assertions.assertEquals(-8,product);
     }
     @Test
-    public void testDubbelNegativeMultiplycation() {
+    public void testDoubleNegativeMultiplication() {
         int product = calculator.multiply(-4,-2);
         Assertions.assertEquals(8,product);
     }
