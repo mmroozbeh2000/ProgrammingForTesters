@@ -21,28 +21,19 @@ public class TestCreateEmployeeModel {
                 .departmentId(EMPLOYEE_MODEL.getDepartmentId())
                 .build();
 
-
         Assertions.assertEquals(EMPLOYEE_MODEL.getEmployeeId(), model.getEmployeeId());
         Assertions.assertEquals(EMPLOYEE_MODEL.getFirstName(), model.getFirstName());
         Assertions.assertEquals(EMPLOYEE_MODEL.getLastName(), model.getLastName());
         Assertions.assertEquals(EMPLOYEE_MODEL.getSalary(), model.getSalary());
         Assertions.assertEquals(EMPLOYEE_MODEL.getFullTime(), model.getFullTime());
         Assertions.assertEquals(EMPLOYEE_MODEL.getDepartmentId(), model.getDepartmentId());
-
     }
 
-    // TODO Need an explanation. Don't understand this
     @Test
     public void testCreateEmployeeModelThrowsException() {
         Assertions.assertThrows(NullPointerException.class, () ->{
-            EmployeeModel.builder()
-                    .employeeId(EMPLOYEE_MODEL.getEmployeeId())
-//                    .firstName(EMPLOYEE_MODEL.getFirstName())
-//                    .lastName(EMPLOYEE_MODEL.getLastName())
-//                    .salary(EMPLOYEE_MODEL.getSalary())
-//                    .fullTime(EMPLOYEE_MODEL.getFullTime())
-//                    .departmentId(EMPLOYEE_MODEL.getDepartmentId())
-                    .build();
+            //EmployeeModel.builder().employeeId(EMPLOYEE_MODEL.getEmployeeId()).build();
+            EmployeeModel.builder().build();
         });
     }
 }
