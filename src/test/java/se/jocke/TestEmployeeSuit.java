@@ -1,2 +1,4 @@
-package se.jocke;public class TestEmployeeSuit {
+package se.jocke;
+
+public class TestEmployeeSuit {
 }
