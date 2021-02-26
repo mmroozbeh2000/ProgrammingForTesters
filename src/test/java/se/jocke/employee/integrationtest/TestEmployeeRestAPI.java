@@ -22,27 +22,10 @@ public class TestEmployeeRestAPI extends TestClient {
     Optional<List<EmployeeModel>> employees = null;
     Optional<EmployeeModel> employee = null;
 
-    //    @When("^the client calls /employee$")
-//    public void getALL() throws Throwable {
-//        employees = getAllEmployees(1);
-//    }
-    int bajs = 0;
-    @When("client bajsar")
-    public void clientBajsar(){
-        bajs = 5;
-    }
-    @Then("client gets poops")
-    public void clientGetsPoops(){
-        System.out.println("bajsa" + bajs);
-    }
-
-
-    @When("^the client calls all employee$")
-    public void the_client_calls_all_employee() {
+        @When("^the client calls /employee$")
+    public void getALL() throws Throwable {
         employees = getAllEmployees();
-        throw new io.cucumber.java.PendingException();
     }
-
 
     @Then("^the client receives (\\d+) employees$")
     public void theClientGotAllEmployees(int numberOfEmployees) throws Throwable {
@@ -112,8 +95,8 @@ public class TestEmployeeRestAPI extends TestClient {
         });
     }
 
-    @And("the error message is {int} : [Entity with id {int} not found]")
-    public void checkErrorMessage(Integer errorCode, Integer employeeId) {
+    @And("the error is {int} : [Entity with id {int} not found]")
+    public void checkTheErrorMessage(Integer errorCode, Integer employeeId) {
         Assertions.assertEquals(errorCode + " : [Entity with id " + employeeId + " not found]", exceptionThatWasThrown.getMessage());
     }
 }

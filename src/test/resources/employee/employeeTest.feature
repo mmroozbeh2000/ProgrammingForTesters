@@ -1,9 +1,6 @@
 Feature: test employee api
-  Scenario: clients do this
-    When client bajsar
-    Then client gets poops
   Scenario: client gets all employees
-    When the client calls all employees
+    When the client calls /employee
     Then the client receives 3 employees
   Scenario: client updates everything for employee 1
     When the client updates everything for employee to Coding
@@ -23,8 +20,8 @@ Feature: test employee api
     When the client deletes employee 78
     When the client deletes employee 79
     Then the employee 77 is deleted
-    And  the error message is 404 : [Entity with id 77 not found]
+    And  the error is 404 : [Entity with id 77 not found]
     Then the employee 78 is deleted
-    And  the error message is 404 : [Entity with id 78 not found]
+    And  the error is 404 : [Entity with id 78 not found]
     Then the employee 79 is deleted
-    And  the error message is 404 : [Entity with id 79 not found]
+    And  the error is 404 : [Entity with id 79 not found]
