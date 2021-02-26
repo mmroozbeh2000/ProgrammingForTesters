@@ -24,7 +24,4 @@ public class TestCreateDepartment {
             Department.builder().departmentName(DEPARTMENT.getDepartmentName()).build();
         });
     }
-
-
-
 }

@@ -1,4 +1,4 @@
-package se.jocke.otherTests;
+package se.jocke;
 
 import com.google.gson.Gson;
 import io.cucumber.spring.CucumberContextConfiguration;

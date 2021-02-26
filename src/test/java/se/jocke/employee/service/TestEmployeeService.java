@@ -34,7 +34,7 @@ public class TestEmployeeService {
                 .firstName("Gunnar")
                 .lastName("Svensson")
                 .fullTime(true)
-                .salary(BigDecimal.valueOf(25000).setScale(2))
+                .salary(BigDecimal.valueOf(25000))
                 .departmentId(1)
                 .build()));
 
@@ -46,7 +46,7 @@ public class TestEmployeeService {
                 () -> assertEquals(1, employee.getEmployeeId().getId()),
                 () -> assertEquals("Gunnar", employee.getFirstName()),
                 () -> assertEquals("Svensson", employee.getLastName()),
-                () -> assertEquals(BigDecimal.valueOf(25000).setScale(2), employee.getSalary())
+                () -> assertEquals(BigDecimal.valueOf(25000), employee.getSalary())
         );
         System.out.println(employee);
         verify(employeeDao, times(1)).findById(1);
