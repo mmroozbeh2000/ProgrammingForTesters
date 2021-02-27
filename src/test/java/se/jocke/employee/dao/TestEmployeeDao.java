@@ -37,7 +37,6 @@ public class TestEmployeeDao {
                 () -> assertEquals(BigDecimal.valueOf(25000).setScale(2),  optionalEmployeeEntry.get().getSalary()),
                 () -> assertEquals(1,  optionalEmployeeEntry.get().getDepartmentId())
         );
-
     }
 
     @Test

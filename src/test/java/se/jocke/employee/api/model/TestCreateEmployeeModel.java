@@ -10,17 +10,17 @@ public class TestCreateEmployeeModel {
 
     @Test
     public void testCreateEmployeeModel() {
-        System.out.println(EMPLOYEE_MODEL.toString());
+        //System.out.println(EMPLOYEE_MODEL.toString());
 
         EmployeeModel model = EmployeeModel.builder()
                 .employeeId(EMPLOYEE_MODEL.getEmployeeId())
+                //.firstName(null)
                 .firstName(EMPLOYEE_MODEL.getFirstName())
                 .lastName(EMPLOYEE_MODEL.getLastName())
                 .salary(EMPLOYEE_MODEL.getSalary())
                 .fullTime(EMPLOYEE_MODEL.getFullTime())
                 .departmentId(EMPLOYEE_MODEL.getDepartmentId())
                 .build();
-
 
         Assertions.assertEquals(EMPLOYEE_MODEL.getEmployeeId(), model.getEmployeeId());
         Assertions.assertEquals(EMPLOYEE_MODEL.getFirstName(), model.getFirstName());

@@ -24,12 +24,14 @@ public class TestEmployeeRestAPI extends TestClient {
     Optional<EmployeeModel> employee = null;
 
 
-    @When("^client calls /employee$")
+
+
+    @When("client calls /employee")
     public void addAllEmployees() {
         employees = getAllEmployees();
     }
 
-    @Then("^client receives (\\d+) employees$")
+    @Then("client receives {int} employees")
     public void clientGotAllEmployees(int numberOfEmployees) {
         assertEquals(numberOfEmployees, employees.get().size());
     }
